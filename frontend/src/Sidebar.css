@@ -1,0 +1,361 @@
+
+/* =========================================
+   EMPLOYEEHUB - PREMIUM SIDEBAR
+========================================= */
+
+.sidebar {
+  width: 265px;
+  min-width: 265px;
+  min-height: 100vh;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 18px 20px;
+  background: #111b32;
+  color: #ffffff;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 5px 0 25px rgba(15,23,42,0.08);
+  z-index: 100;
+}
+
+/* BRAND */
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0 10px 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.09);
+}
+
+.sidebar-logo {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: linear-gradient(135deg,#2563eb,#6366f1);
+  border-radius: 13px;
+  box-shadow: 0 5px 15px rgba(59,130,246,0.25);
+}
+
+.sidebar-logo img {
+  width: 56px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.sidebar-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sidebar-brand-text strong {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.sidebar-brand-text span {
+  font-size: 11px;
+  color: #94a3b8;
+  letter-spacing: 0.6px;
+}
+
+/* SECTION TITLE */
+
+.sidebar-section-title {
+  margin: 32px 12px 15px;
+  color: #7f8da8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* NAVIGATION */
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-nav-item {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 15px;
+  position: relative;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #aebbd0;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease,
+              color 0.2s ease,
+              border-color 0.2s ease;
+}
+
+.sidebar-nav-item:hover {
+  background: rgba(255,255,255,0.07);
+  color: #ffffff;
+}
+
+.sidebar-nav-item.active {
+  background: linear-gradient(
+    100deg,
+    rgba(37,99,235,0.28),
+    rgba(99,102,241,0.13)
+  );
+  border-color: rgba(96,165,250,0.22);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.sidebar-nav-item.active::before {
+  content: "";
+  position: absolute;
+  left: -19px;
+  top: 10px;
+  bottom: 10px;
+  width: 3px;
+  background: #60a5fa;
+  border-radius: 0 5px 5px 0;
+}
+
+/* NAVIGATION ICONS */
+
+.sidebar-nav-icon {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: #94a3b8;
+}
+
+.sidebar-nav-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.sidebar-nav-item:hover .sidebar-nav-icon,
+.sidebar-nav-item.active .sidebar-nav-icon {
+  color: #93c5fd;
+}
+
+/* ACTIVE DOT */
+
+.sidebar-active-dot {
+  width: 6px;
+  height: 6px;
+  margin-left: auto;
+  background: #60a5fa;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(96,165,250,0.6);
+}
+
+/* BOTTOM PROFILE */
+
+.sidebar-bottom {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.09);
+}
+
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 10px;
+  background: rgba(255,255,255,0.045);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+}
+
+.sidebar-avatar {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg,#3b82f6,#6366f1);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 11px;
+}
+
+.sidebar-profile-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sidebar-profile-info strong {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar-profile-info span {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* ACCESSIBILITY */
+
+.sidebar-nav-item:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 3px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 230px;
+    min-width: 230px;
+    padding: 22px 14px;
+  }
+
+  .sidebar-brand-text strong {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .sidebar-brand {
+    padding-bottom: 15px;
+  }
+
+  .sidebar-section-title {
+    margin: 18px 5px 10px;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .sidebar-nav-item {
+    width: auto;
+    min-height: 42px;
+    padding: 9px 11px;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .sidebar-nav-item.active::before {
+    display: none;
+  }
+
+  .sidebar-nav-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .sidebar-nav-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .sidebar-active-dot {
+    display: none;
+  }
+
+  .sidebar-bottom {
+    display: none;
+  }
+}
+
+.sidebar {
+  width: 272px;
+  min-width: 272px;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(84, 112, 185, 0.13), transparent 18rem),
+    #111b32;
+  box-shadow: 8px 0 30px rgba(13, 24, 45, 0.07);
+}
+
+.sidebar-brand {
+  padding-bottom: 25px;
+}
+
+.sidebar-logo {
+  width: 60px;
+  height: 46px;
+  min-width: 60px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.sidebar-brand-text strong {
+  letter-spacing: -0.035em;
+}
+
+.sidebar-section-title {
+  margin-top: 29px;
+}
+
+.sidebar-nav {
+  gap: 5px;
+}
+
+.sidebar-nav-item {
+  min-height: 46px;
+  border-radius: 9px;
+}
+
+.sidebar-nav-item.active {
+  background: linear-gradient(100deg, rgba(75, 108, 213, 0.28), rgba(75, 108, 213, 0.1));
+  border-color: rgba(130, 155, 236, 0.2);
+}
+
+.sidebar-nav-item.active::before {
+  left: -19px;
+  background: #86a1ff;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 238px;
+    min-width: 238px;
+  }
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .sidebar-nav-item {
+    flex: 1 1 120px;
+  }
+}
